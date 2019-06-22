@@ -66,7 +66,7 @@ class Hangman extends Component {
       <div className='Hangman'>
         <h1>Hangman</h1>
         <img src={this.props.images[this.state.nWrong]} alt={`${this.state.nWrong}/6`} />
-        <h3>Number Wrong: {this.state.nWrong}</h3>
+        <h3>{this.guessedWord().includes('_') ? `Number Wrong: ${this.state.nWrong}` : 'You WIN!!!'}</h3>
         <button style={{ width: 100 }} onClick={this.restart}>Restart</button>
         
         <p className='Hangman-word'>{this.guessedWord()}</p>
